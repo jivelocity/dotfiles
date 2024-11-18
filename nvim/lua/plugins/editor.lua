@@ -11,17 +11,6 @@ return {
       "nvim-lua/plenary.nvim",
     },
     keys = {
-      --  {
-      --    ";f",
-      --    function()
-      --      local builtin = require("telescope.builtin")
-      --      builtin.find_files({
-      --        no_ignore = false,
-      --        hidden = true,
-      --      })
-      --    end,
-      --    desc = "Lists files in your current working directory, respects .gitignore",
-      --  },
       {
         ";r",
         function()
@@ -95,53 +84,6 @@ return {
         desc = "Open File Browser with the path of the current buffer",
       },
     },
-    --    opts = function()
-    --      return {
-    --        defaults = {
-    --          file_ignore_patterns = { ".git/*", "svelte-kit/*", "target/*", "node_modules/*" },
-    --          layout_strategy = "horizontal",
-    --          layout_config = { prompt_position = "top" },
-    --          sorting_strategy = "ascending",
-    --          winblend = 0,
-    --          mappings = {
-    --            n = {},
-    --          },
-    --        },
-    --        pickers = {},
-    --        extensions = {
-    --          fzf = {
-    --            override_generic_sorter = false,
-    --            override_file_sorter = true,
-    --            case_mode = "smart_case",
-    --          },
-    --          file_browser = {
-    --            theme = "ivy",
-    --            hijack_netrw = true,
-    --            mappings = {
-    --              n = {
-    --                ["N"] = require("telescope").extensions.file_browser.actions.create,
-    --                ["h"] = require("telescope").extensions.file_browser.actions.goto_parent_dir,
-    --                ["/"] = function()
-    --                  vim.cmd("startinsert")
-    --                end,
-    --                ["<C-u>"] = function(prompt_bufnr)
-    --                  for _ = 1, 10 do
-    --                    require("telescope.actions").move_selection_previous(prompt_bufnr)
-    --                  end
-    --                end,
-    --                ["<C-d>"] = function(prompt_bufnr)
-    --                  for _ = 1, 10 do
-    --                    require("telescope.actions").move_selection_next(prompt_bufnr)
-    --                  end
-    --                end,
-    --                ["<PageUp>"] = require("telescope.actions").preview_scrolling_up,
-    --                ["<PageDown>"] = require("telescope.actions").preview_scrolling_down,
-    --              },
-    --            },
-    --          },
-    --        },
-    --      }
-    --    end,
     config = function(_, opts)
       local telescope = require("telescope")
       local actions = require("telescope.actions")
