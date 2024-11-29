@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 local config = {}
 local act = wezterm.action
-local theme = wezterm.plugin.require("https://github.com/neapsix/wezterm").main
+local theme = require("lua/rose-pine").main
 
 if wezterm.config_builder then
 	config = wezterm.config_builder()
@@ -14,31 +14,34 @@ config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.font_size = 12
 
 config.default_cursor_style = "BlinkingBar"
+config.colors = theme.colors()
+
+-- config.window_frame = theme.window_frame()
 
 -- config.color_scheme = "Catppuccin Mocha"
 
-config.colors = {
-	tab_bar = {
-		background = "#1e1e2e",
-		active_tab = {
-			bg_color = "#313244",
-			fg_color = "#e0def4",
-		},
-		inactive_tab = {
-			bg_color = "#1e1e2e",
-			fg_color = "#7e7eae",
-		},
-		inactive_tab_hover = {
-			bg_color = "#1e1e2e",
-			fg_color = "#e0def4",
-		},
-	},
-}
+-- config.colors = {
+-- 	tab_bar = {
+-- 		background = "#1e1e2e",
+-- 		active_tab = {
+-- 			bg_color = "#313244",
+-- 			fg_color = "#e0def4",
+-- 		},
+-- 		inactive_tab = {
+-- 			bg_color = "#1e1e2e",
+-- 			fg_color = "#7e7eae",
+-- 		},
+-- 		inactive_tab_hover = {
+-- 			bg_color = "#1e1e2e",
+-- 			fg_color = "#e0def4",
+-- 		},
+-- 	},
+-- }
 
 config.tab_bar_at_bottom = true
 config.adjust_window_size_when_changing_font_size = false
 
-config.window_background_opacity = 1
+config.window_background_opacity = 0.95
 config.window_padding = {
 	left = 0,
 	right = 0,
@@ -51,18 +54,26 @@ wezterm.on("format-window-title", function(event)
 	return ""
 end)
 
-config.window_background_gradient = {
-	interpolation = "Linear",
+-- config.window_background_gradient = {
+-- 	interpolation = "Linear",
+--
+-- 	orientation = "Vertical",
+--
+-- 	blend = "Rgb",
+-- 	-- colors = {
+-- 	-- 	"#1f1d2e",
+-- 	-- 	"#191724",
+-- 	-- },
+-- 	colors = {
+-- 		"#191724",
+-- 		"#181825",
+-- 	},
+-- }
 
-	orientation = "Vertical",
+-- add window size initial coll and row
+config.initial_cols = 110
+config.initial_rows = 30
 
-	blend = "Rgb",
-
-	colors = {
-		"#191724",
-		"#181825",
-	},
-}
 config.bypass_mouse_reporting_modifiers = "ALT"
 
 config.keys = {

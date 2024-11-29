@@ -23,6 +23,10 @@ return {
         "lua",
         "styled",
         "vue",
+        "go",
+        "gomod",
+        "gowork",
+        "gosum",
       },
 
       -- matchup = {
