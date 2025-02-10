@@ -71,8 +71,8 @@ end)
 -- }
 
 -- add window size initial coll and row
-config.initial_cols = 110
-config.initial_rows = 30
+config.initial_cols = 150
+config.initial_rows = 35
 
 config.bypass_mouse_reporting_modifiers = "ALT"
 
