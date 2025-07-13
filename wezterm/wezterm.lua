@@ -9,9 +9,9 @@ end
 
 -- config.default_prog = { "zsh" }
 
-config.font = wezterm.font("JetBrainsMono Nerd Font")
+config.font = wezterm.font("MonoLisa Static")
 
-config.font_size = 12
+config.font_size = 14
 
 config.default_cursor_style = "BlinkingBar"
 config.colors = theme.colors()
@@ -41,7 +41,7 @@ config.colors = theme.colors()
 config.tab_bar_at_bottom = true
 config.adjust_window_size_when_changing_font_size = false
 
-config.window_background_opacity = 0.95
+config.window_background_opacity = 0.9
 config.window_padding = {
 	left = 0,
 	right = 0,
@@ -71,7 +71,7 @@ end)
 -- }
 
 -- add window size initial coll and row
-config.initial_cols = 150
+config.initial_cols = 140
 config.initial_rows = 35
 
 config.bypass_mouse_reporting_modifiers = "ALT"

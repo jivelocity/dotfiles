@@ -6,7 +6,7 @@
 local main = {}
 
 local main_palette = {
-	base = "#191724",
+	base = "#010001",
 	overlay = "#26233a",
 	muted = "#6e6a86",
 	text = "#e0def4",
